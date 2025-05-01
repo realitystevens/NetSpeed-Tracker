@@ -41,18 +41,11 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/api/speedtest', methods=['GET'])
-def speedtest_api():
+@app.route('/run-speedtest', methods=['GET'])
+def run_speedtest_api():
     result = run_speedtest()
     speedtest_history.append(result)
     return jsonify(result)
-
-
-@app.route('/api/history', methods=['GET'])
-def history_api():
-    return jsonify(speedtest_history)
-
-
 
 
 
