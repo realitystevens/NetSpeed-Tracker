@@ -9,27 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script async src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script async src="https://kit.fontawesome.com/01187779a7.js" crossorigin="anonymous"></script>
     <script async src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <div class="body">
         <div class="content">
             <main class="main" id="main">
-                <h1>NetSpeed Tracker</h1>
-                <h3>Track your Internet Speed and get graphical visualization of previous internet speed check history</h3>
+                <h1 class="main-title">NetSpeed Tracker</h1>
+                <p class="main-desc">Track your Internet Speed and view your speed test history.</p>
                 <div id="results">
-                    <p><strong>Download Speed:</strong> <span id="download"></span> Mbps</p>
-                    <p><strong>Upload Speed:</strong> <span id="upload"></span> Mbps</p>
-                    <p><strong>Ping:</strong> <span id="ping"></span> ms</p>
+                    <!-- Content dynamically generated from script.js -->
                 </div>
                 <button class="button" onclick="runSpeedTest()">
-                    <span class="spinner"></span>
-                    <p class="button-text">Check Speed</p>
+                    <span class="spinner"></span> <p class="button-text">Check Speed</p>
                 </button>
-            
-                <h2 id="sub_title">Speed Test History</h2>
-                <canvas id="speedTestChart"></canvas>
+                
+                <h2 id="history-title">Speed Test History</h2>
+                <ul class="history-list">
+                    <!-- Content dynamically generated from script.js -->
+                </ul>
+
+                <p class="footer-text">Project is Open source. View codebase on <i class="fa-brands fa-github"></i> Github Repository <a href="https://">here</a></p>
             </main>
         </div>
     </div>
